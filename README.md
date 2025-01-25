@@ -18,7 +18,7 @@ This application seeks to seek qualified candidates on github for a potential em
 
 ## Installation
 
-* This app can be run in a modern browser at the following [URL](https://coming-soon!).
+* This app can be run in a modern browser at the following [URL](https://candidate-quest.onrender.com/).
 
 
 
@@ -26,7 +26,9 @@ This application seeks to seek qualified candidates on github for a potential em
 
 ## Usage
 
-Coming Soon!
+Use the User Interface to cycle through available candidates one at a time
+- Add candidates to your review list with `+` and skip them with `-`
+- Review your saved candidates with the Saved Candidates button or add `/SavedCandidates` to your browser address bar
 
 
 

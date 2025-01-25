@@ -18,7 +18,7 @@ This application seeks to seek qualified candidates on github for a potential em
 
 ## Installation
 
-* This app can be run in a modern browser at the following [URL](https://).
+* This app can be run in a modern browser at the following [URL](https://coming-soon!).
 
 
 
@@ -27,7 +27,7 @@ This application seeks to seek qualified candidates on github for a potential em
 ## Usage
 
 Coming Soon!
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/1035076639?h=01f084c303" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
 
 
 
@@ -54,7 +54,7 @@ For those interested, here are ways that you can contribute to the project:
 
 ## Credits
 
-Starter code provided by edX Bootcamps, see ___coming soon!___ commit for more information
+Starter code provided by edX Bootcamps, see this [Commit](https://github.com/ArtOfTheNiles/Candidate-Quest/commit/7d161a0633fa3e2f148a7e6389a45b11722d12b7) for more information
 
 
 

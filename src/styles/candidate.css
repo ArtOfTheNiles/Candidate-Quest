@@ -1,0 +1,56 @@
+.candidate-search-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.candidate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+  max-width: 500px;
+  min-height: 200px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0 2rem 0;
+  border: 1px solid white;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.candidate-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 90%;
+  padding: 0.25rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  background-color: rgba(100, 100, 100, 0.1);
+}
+
+li:first-child {
+  font-size: 115%;
+  font-weight: 500;
+}
+
+li p {
+  display: inline-flex;
+  margin: 0 0 0 0.5rem;
+}
+
+.candidate-container img {
+  width: 90%;
+  border-radius: 4rem;
+  border: 2px solid white;
+  margin-bottom: 0.5rem;
+}
+
+#search-title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}

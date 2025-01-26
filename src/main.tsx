@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom';
-import './index.css';
+import './styles/index.css';
 
 import App from './App.tsx';
 import CandidateSearch from './pages/CandidateSearch.tsx';

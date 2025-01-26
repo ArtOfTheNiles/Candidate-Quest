@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { searchGithub, searchGithubUser } from "../api/API";
+// import { searchGithub, searchGithubUser } from "../api/API";
 
-import octocat  from "../../notes/octocat.json";
+import octocat  from "../../public/octocat.json";
 import Candidate from "../interfaces/Candidate.interface";
 import "../styles/candidate.css";
 

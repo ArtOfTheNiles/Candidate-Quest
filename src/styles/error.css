@@ -1,0 +1,39 @@
+section.error * {
+  margin: 1rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+section.error h1 {
+  font-size: 5rem;
+  color: rgb(224, 34, 66);
+}
+
+section.error p {
+  font-size: 1.5rem;
+  color: rgb(238, 238, 238);
+}
+
+section.error a {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: rgb(158, 12, 36);
+  background-image: linear-gradient(rgb(224, 34, 66) 50%, rgb(158, 12, 36) 100%);
+  border-radius: 1rem;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+section.error a:hover {
+  background-image: linear-gradient(rgb(158, 12, 36) 50%, rgb(224, 34, 66) 100%);
+}

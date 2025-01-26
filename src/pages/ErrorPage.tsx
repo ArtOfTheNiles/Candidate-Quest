@@ -6,7 +6,7 @@ const ErrorPage = () => {
     <section className='error'>
       <h1>404: Page Not Found</h1>
       <p>Sorry, the page you are looking for does not exist.</p>
-      <h1> ¯\_(ツ)_/¯</h1>
+      <h2> ¯\_(ツ)_/¯</h2>
       <p>Would you like to return home?</p>
       <Link to="/">Return Home</Link>
     </section>

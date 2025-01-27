@@ -39,11 +39,10 @@ const CandidateSearch = () => {
       await cacheCandidates();
     }else if(candidateCache.length > 0){
       data = candidateCache.pop() as Candidate;
-      console.log("Candidate from cache: "+JSON.stringify(data, null, 2));
     }else{
       console.warn("Cache empty! Refreshing cache...");
       await cacheCandidates();
-      data = await searchGithubUser("octocat"); //TODO Handle more gracefully
+      data = await searchGithubUser("octocat"); //TODO Handle more gracefully, currently running through goes back to octocat every time
     }
     setCandidate(data);
   };
@@ -51,18 +50,16 @@ const CandidateSearch = () => {
   const cacheCandidates = async () => {
     console.info("Caching candidates...");
     const data = await searchGithub();
-    console.info(`Current Candidate Cache [${data.length}]: ` + JSON.stringify(data, null, 2));
     setCandidateCache(data);
   };
 
   const handleAccept = async () => {
     setSavedCandidates(prevSavedCandidates => {
       if(!prevSavedCandidates){
-        console.warn("No saved candidates yet.");
+        console.warn("No saved candidates yet!");
         return [candidate];
       }else{
         const updatedCandidates = [...prevSavedCandidates, candidate];
-        console.info("You've saved these candidates: " + JSON.stringify(updatedCandidates, null, 2));
         return updatedCandidates;
       }
     });
@@ -75,6 +72,10 @@ const CandidateSearch = () => {
 
   return <div className="candidate-search-container">
     <h1 id="search-title">Search <em>Github User</em> Candidates</h1>
+
+    <div className="search-module">
+    <button className="reject" onClick={handleReject}>-</button>
+
     <section className="candidate-container">
       <img src={candidate.avatar_url ? candidate.avatar_url : "./github-mark-white.png"}
       alt={(candidate.login ? candidate.login : 'user') + ' avatar'} 
@@ -105,8 +106,10 @@ const CandidateSearch = () => {
         }
       </ul>
     </section>
-      <button className="reject" onClick={handleReject}>-</button>
-      <button className="accept" onClick={handleAccept} autoFocus>+</button>
+
+    <button className="accept" onClick={handleAccept} autoFocus>+</button>
+
+    </div>
   </div>
 };
 

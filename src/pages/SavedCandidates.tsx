@@ -5,13 +5,13 @@ import Candidate from '../interfaces/Candidate.interface';
 import '../styles/candidateTable.css'
 
 const SavedCandidates = () => {
-  const [candidates, setCandidates] = useState<Candidate[]>([]);
-  const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([] as Candidate[]);
-
+  const [candidates, setCandidates] = useState<Candidate[]>(loadCandidatesFromLocalStorage());
+  const [savedCandidates, setSavedCandidates] = useState<Candidate[]>(loadCandidatesFromLocalStorage());
 
   useEffect(() => {
     const loadedCandidates = loadCandidatesFromLocalStorage();
     setCandidates(loadedCandidates);
+    setSavedCandidates(loadedCandidates);
   }, []);
 
   useEffect(() => {
@@ -19,10 +19,10 @@ const SavedCandidates = () => {
   }, [savedCandidates]);
 
   const handleReject = (index: number) => {
-    // console.warn("Rejecting candidate at index: " + index);
     setCandidates((prevCandidates) => {
       const newCandidates = [...prevCandidates];
       newCandidates.splice(index, 1);
+      setSavedCandidates(newCandidates);
       return newCandidates;
     });
   };

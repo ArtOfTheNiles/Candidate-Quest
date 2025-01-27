@@ -1,0 +1,37 @@
+table {
+  display: table;
+  width: 80vw;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+thead,
+tr {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #ccc;
+}
+tr:nth-child(2n) {
+  background-color: none;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.icon img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.missing-data {
+  font-size: 80%;
+  color: #555;
+  font-weight: thin;
+}

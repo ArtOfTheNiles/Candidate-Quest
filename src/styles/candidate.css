@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.search-module {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .candidate-container {
   display: flex;
   flex-direction: column;

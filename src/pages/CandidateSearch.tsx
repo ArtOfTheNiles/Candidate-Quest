@@ -43,7 +43,7 @@ const CandidateSearch = () => {
     }else{
       console.warn("Cache empty! Refreshing cache...");
       await cacheCandidates();
-      data = await searchGithubUser("octocat");
+      data = await searchGithubUser("octocat"); //TODO Handle more gracefully
     }
     setCandidate(data);
   };
@@ -70,11 +70,8 @@ const CandidateSearch = () => {
   };
 
   const handleReject = async () => {
-    // console.info("You've rejected candidate: "+JSON.stringify(candidate, null, 2));
     fetchCandidate();
   };
-
-
 
   return <div className="candidate-search-container">
     <h1 id="search-title">Search <em>Github User</em> Candidates</h1>

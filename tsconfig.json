@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "Notes/acceptButton.tsx", "Notes/rejectButton.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

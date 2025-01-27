@@ -3,13 +3,13 @@ import { searchGithub, searchGithubUser } from "../api/API";
 
 import Candidate from "../interfaces/Candidate.interface";
 import "../styles/candidate.css";
-import { saveCandidatesToLocalStorage } from "../api/IO";
+import { saveCandidatesToLocalStorage, loadCandidatesFromLocalStorage } from "../api/IO";
 
 
 const CandidateSearch = () => {
   const [candidate, setCandidate] = useState<Candidate>({} as Candidate);
   const [candidateCache, setCandidateCache] = useState<Candidate[]>([] as Candidate[]);
-  const [savedCandidates, setSavedCandidates] = useState<Candidate[]>([] as Candidate[]);
+  const [savedCandidates, setSavedCandidates] = useState<Candidate[]>(loadCandidatesFromLocalStorage());
   const [firstLoad, setFirstLoad] = useState(true);
 
   //#region UseEffects()
